@@ -1,0 +1,7 @@
+asgref
+django
+graphene-django
+requests
+pytz
+sqlparse
+
