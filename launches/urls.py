@@ -1,7 +1,8 @@
-from django.urls import  path
-from launches.views import launch_index
+from django.urls import path
+from . import views
 
-# Will be every URL that starts with /launches/
 urlpatterns = [
-    path("", launch_index, name="launch-index"),
+    path('', views.index, name='index'),
+    path('launches/', views.launch_list, name='launch_list'),
+    path('launches/<int:launch_id>/', views.launch_detail, name='launch_detail'),
 ]

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Launch Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ launch.mission_name }}</h1>
+        <p>Date: {{ launch.launch_date_utc }}</p>
+        <p>Rocket: {{ launch.rocket_name }}</p>
+        <p>Launch Site: {{ launch.launch_site }}</p>
+        <p>Details: {{ launch.details }}</p>
+        <a href="{% url 'launch_list' %}">Back to All Launches</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SpaceX Launch Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SpaceX Launch Dashboard</h1>
+        <h2>Upcoming Launches</h2>
+        <ul class="list-group">
+            {% for launch in launches %}
+            <li class="list-group-item">
+                <h3>{{ launch.mission_name }}</h3>
+                <p>Date: {{ launch.launch_date_utc }}</p>
+                <p>Rocket: {{ launch.rocket_name }}</p>
+                <p>Launch Site: {{ launch.launch_site }}</p>
+                <p>Details: {{ launch.details }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

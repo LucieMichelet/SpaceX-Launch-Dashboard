@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All SpaceX Launches</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>All SpaceX Launches</h1>
+        <ul class="list-group">
+            {% for launch in launches %}
+            <li class="list-group-item">
+                <a href="{% url 'launch_detail' launch.id %}">{{ launch.mission_name }}</a>
+                <p>Date: {{ launch.launch_date_utc }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

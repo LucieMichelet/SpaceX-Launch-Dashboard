@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'graphene_django',
 ]
 
+GRAPHENE = { 'SCHEMA' : 'space_dashboard.schema.schema',}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
